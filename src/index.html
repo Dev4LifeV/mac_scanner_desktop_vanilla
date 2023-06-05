@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./modal.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+
+    <title>MacScanner</title>
+  </head>
+  <body>
+    <div class="appbar"></div>
+
+    <article class="lookup-container">
+      <article id="lookup-title">
+        <img src="./icon_lookup.svg" />
+        <h2>Latest lookup</h2>
+      </article>
+
+      <article id="lookup-term">
+        <img src="./icon_search_term.svg" />
+        <h2>FF:FF:FF:FF:FF:FF</h2>
+      </article>
+
+      <article id="lookup-hardware">
+        <div>Virtual machine not detected</div>
+        <div>Unicast</div>
+      </article>
+    </article>
+
+    <div id="lookup-details">
+      <section>
+        <h2>Vendor details</h2>
+        <div></div>
+      </section>
+
+      <section>
+        <h2>Block details</h2>
+        <div></div>
+      </section>
+
+      <section>
+        <h2>MAC Address details</h2>
+        <div></div>
+      </section>
+    </div>
+
+    <div id="modal-background"></div>
+    <div id="modal">
+      <div id="modal-header">
+        <img id="modal-icon-close" src="./icon_close.svg" />
+      </div>
+      <div id="modal-body">
+        <div id="modal-form">
+          <input id="modal-input" type="text" placeholder="FF:FF:FF:FF:FF:FF" />
+          <button id="modal-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./modal.js" />
+  </body>
+</html>
