@@ -1,0 +1,249 @@
+/*#region Frames */
+@keyframes open-modal-small-portrait {
+  0% {
+    top: 100%;
+    visibility: hidden;
+  }
+  100% {
+    top: 62%;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-modal-small-portrait {
+  0% {
+    top: 62%;
+    visibility: visible;
+  }
+  100% {
+    top: 100%;
+    visibility: hidden;
+  }
+}
+
+@keyframes open-modal-portrait {
+  0% {
+    top: 100%;
+    visibility: hidden;
+  }
+  100% {
+    top: 70%;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-modal-portrait {
+  0% {
+    top: 70%;
+    visibility: visible;
+  }
+  100% {
+    top: 100%;
+    visibility: hidden;
+  }
+}
+
+@keyframes open-background {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes hide-background {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/*#endregion Frames */
+
+.modal-show {
+  animation-name: open-modal;
+  animation-duration: 0.3s;
+  visibility: visible;
+}
+
+.modal-hide {
+  animation-name: hide-modal;
+  animation-duration: 0.3s;
+  visibility: hidden;
+}
+
+.background-show {
+  animation-name: open-background;
+  animation-duration: 0.5s;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  z-index: 2;
+}
+
+.background-hide {
+  animation-name: hide-background;
+  animation-duration: 0.5s;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  position: absolute;
+  z-index: 1;
+}
+
+#modal {
+  background-color: #ccc5b9;
+  position: fixed;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  bottom: 0;
+  border-radius: 50px 50px 0px 0px;
+  z-index: 10;
+}
+
+#modal-header {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+#modal-input:focus {
+  border-bottom: 1px solid #eb5e28;
+}
+
+#modal-submit {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 12px;
+  color: white;
+  background-color: #eb5e28;
+  border: none;
+}
+
+#modal-submit:active {
+  background-color: #ec7546;
+}
+
+#modal-icon-close {
+  cursor: pointer;
+}
+
+#modal-form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 10px;
+}
+
+@media (min-width: 570px), (max-width: 767px) {
+  #modal {
+    padding-bottom: 150px;
+    width: 90vw;
+    height: 18vh;
+    left: 5vw;
+    right: 5vw;
+  }
+
+  #modal-form {
+    font-size: 1.2rem;
+  }
+
+  #modal-submit {
+    font-size: inherit;
+  }
+
+  .modal-show {
+    animation-name: open-modal-small-portrait;
+  }
+
+  .modal-hide {
+    animation-name: hide-modal-small-portrait;
+  }
+}
+
+@media (min-width: 768px), (max-width: 991) {
+  #modal {
+    width: 80vw;
+    height: 20vh;
+    left: 10vw;
+    right: 10vw;
+  }
+
+  #modal-form {
+    font-size: 1.6rem;
+    top: 0px;
+    bottom: 30px;
+  }
+
+  #modal-submit {
+    font-size: 1.6rem;
+  }
+
+  .modal-show {
+    animation-name: open-modal-small-portrait;
+  }
+
+  .modal-hide {
+    animation-name: hide-modal-small-portrait;
+  }
+}
+
+@media (min-width: 992px) {
+  #modal {
+    background-color: #ccc5b9;
+    position: fixed;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    width: 64vw;
+    height: 20vh;
+    bottom: 0;
+    left: 18vw;
+    right: 18vw;
+    border-radius: 50px 50px 0px 0px;
+    z-index: 10;
+  }
+
+  #modal-form {
+    font-size: 2rem;
+  }
+
+  #modal-submit {
+    font-size: 1.6rem;
+  }
+
+  .modal-show {
+    animation-name: open-modal-portrait;
+  }
+
+  .modal-hide {
+    animation-name: hide-modal-portrait;
+  }
+}
