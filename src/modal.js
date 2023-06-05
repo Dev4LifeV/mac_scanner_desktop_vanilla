@@ -1,4 +1,4 @@
-const button = document.querySelector("[btn-open-modal]");
+const button = document.querySelector("[fab]");
 const modal = document.querySelector("#modal");
 const modalIconClose = document.querySelector("#modal-icon-close");
 const background = document.querySelector("#modal-background");
