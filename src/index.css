@@ -54,14 +54,21 @@
 }
 /*#endregion font-face inter */
 
+html {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+    max-width: 100%;
+}
+
 * {
     font-family: 'Inter';
     font-weight: 300;
 }
 
 h2 {
-    margin: 0px;
-    padding: 0px;
+    font-size: 1.32rem;
+    font-weight: bolder;
 }
 
 body {
@@ -73,18 +80,18 @@ body {
     border-bottom: 1px solid #EB5E28;
 }
 
-.lookup-container {
-    color: #EB5E28;
-    background-color: #403D39;
-}
-
 #lookup-title {
+    color: #EB5E28;
     display: flex;
     padding: 10px;
     align-items: center;
+    background-color: #403D39;
 }
 
 #lookup-term {
+    color: #EB5E28;
+    position: sticky;
+    top: 0;
     background-color: #4B4843;
     display: flex;
     padding: 10px;
@@ -92,6 +99,7 @@ body {
 }
 
 #lookup-hardware {
+    color: #EB5E28;
     padding: 10px;
     background-color: #403D39;
     display: flex;
@@ -101,10 +109,54 @@ body {
 }
 
 #lookup-details {
+    padding: 0px;
+    margin: 0px;
     color: white;
-    width: 50vw;
+    max-width: 100%;
+    height: 100vh;
+    box-sizing: content-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+[fab] {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #EB5E28;
+    border: none;
+    border-radius: 360px;
+    width: 60px;
+    height: 60px;
+}
+
+[fab] img {
+    width: 35px;
+    height: 35px;
+}
+
+.container-details {
+    min-width: 60%;
+}
+
+.container-details table {
+    width: 100%;
+}
+
+.container-details table tbody tr td {
+    width: 50%;
+}
+
+.container-details table tbody tr:nth-child(odd) {
+    background-color: #EB5E28;
+}
+
+.container-details table tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+table {
+    border-spacing: 0px;
 }
