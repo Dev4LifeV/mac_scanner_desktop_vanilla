@@ -13,93 +13,20 @@
   <body>
     <div class="appbar"></div>
 
-    
-      <article id="lookup-title">
-        <img src="./icon_lookup.svg" />
-        <h2>Latest lookup</h2>
-      </article>
+    <article id="lookup-title">
+      <img src="./icon_lookup.svg" />
+      <h2>Latest lookup</h2>
+    </article>
 
-      <article id="lookup-term">
-        <img src="./icon_search_term.svg" />
-        <h2>FF:FF:FF:FF:FF:FF</h2>
-      </article>
-
-      <article id="lookup-hardware">
-        <div>Virtual machine not detected</div>
-        <div>Unicast</div>
-      </article>
+    <article id="lookup-term">
+      <img src="./icon_search_term.svg" />
+      <h2>FF:FF:FF:FF:FF:FF</h2>
+    </article>
 
     <div id="lookup-details">
       <section class="container-details">
-        <h2>Vendor details</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="container-details">
-        <h2>Block details</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="container-details">
-        <h2>MAC Address details</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-            <tr>
-              <td>aaa</td>
-              <td>aaa</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Lookup details</h2>
+        <table id="table-details"></table>
       </section>
     </div>
 
@@ -109,17 +36,28 @@
         <img id="modal-icon-close" src="./icon_close.svg" />
       </div>
       <div id="modal-body">
-        <div id="modal-form">
-          <input id="modal-input" type="text" placeholder="FF:FF:FF:FF:FF:FF" />
+        <form
+          id="modal-form"
+          action="https://mac-address-lookup1.p.rapidapi.com/static_rapid/mac_lookup/"
+          method="GET"
+        >
+          <input
+            id="modal-input"
+            type="text"
+            placeholder="FFFFFFFFFFFF"
+            maxlength="12"
+            pattern="[0-9 A-F]+"
+          />
           <button id="modal-submit">Submit</button>
-        </div>
+        </form>
       </div>
     </div>
 
     <button fab>
-      <img src="./icon_search.svg"/>
+      <img src="./icon_search.svg" />
     </button>
 
-    <script src="./modal.js" />
+    <script type="text/javascript" src="./modal.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
