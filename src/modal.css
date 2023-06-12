@@ -5,14 +5,14 @@
     visibility: hidden;
   }
   100% {
-    top: 62%;
+    top: 69%;
     visibility: visible;
   }
 }
 
 @keyframes hide-modal-small-portrait {
   0% {
-    top: 62%;
+    top: 69%;
     visibility: visible;
   }
   100% {
