@@ -1,6 +1,10 @@
-const button = document.querySelector("[fab]");
+const modalButtonSubmit = document.querySelector("#modal-submit");
 const modal = document.querySelector("#modal");
 const modalIconClose = document.querySelector("#modal-icon-close");
+const modalInput = document.querySelector("#modal-input");
+const modalForm = document.querySelector("#modal-form");
+
+const button = document.querySelector("[fab]");
 const background = document.querySelector("#modal-background");
 
 let closeModal = function (e) {
