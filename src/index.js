@@ -1,5 +1,3 @@
-const modalInput = document.querySelector("#modal-input");
-const modalForm = document.querySelector("#modal-form");
 const lookupDetails = document.querySelector("#lookup-details");
 const tableDetails = document.querySelector("#table-details");
 const formattedTableLabels = [
@@ -92,4 +90,4 @@ function onError(resp) {
   lookupDetails.appendChild(errorElement);
 }
 
-buttonSubmit.onclick = (e) => getMacDetails(e, modalInput.value);
+modalButtonSubmit.onclick = (e) => getMacDetails(e, modalInput.value);
