@@ -98,27 +98,16 @@ body {
     align-items: center;
 }
 
-#lookup-hardware {
-    color: #EB5E28;
-    padding: 10px;
-    background-color: #403D39;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-
-}
-
 #lookup-details {
     padding: 0px;
     margin: 0px;
     color: white;
     max-width: 100%;
-    height: 100vh;
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    margin-top: 50px;
 }
 
 [fab] {
@@ -145,15 +134,15 @@ body {
     width: 100%;
 }
 
-.container-details table tbody tr td {
+.container-details table tr td {
     width: 50%;
 }
 
-.container-details table tbody tr:nth-child(odd) {
+.container-details table tr:nth-child(odd) {
     background-color: #EB5E28;
 }
 
-.container-details table tbody tr:nth-child(even) {
+.container-details table tr:nth-child(even) {
     background-color: transparent;
 }
 
