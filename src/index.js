@@ -33,7 +33,7 @@ function getMacDetails(event, macAddress) {
       url: modalForm.action + `?query=${macAddress}`,
       method: modalForm.method,
       headers: {
-        "X-RapidAPI-Key": "911aaa2ab6msh0130883ff84ee8dp163772jsn45d7f2d88fe1",
+        "X-RapidAPI-Key": "PUT YOUR API KEY HERE",
         "X-RapidAPI-Host": "mac-address-lookup1.p.rapidapi.com",
       },
     };
