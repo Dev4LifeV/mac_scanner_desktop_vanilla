@@ -8,13 +8,13 @@ const button = document.querySelector("[fab]");
 const background = document.querySelector("#modal-background");
 
 let closeModal = function (e) {
-  e.preventDefault();
   background.classList.add("background-hide");
   background.classList.remove("background-show");
 
   modal.classList.add("modal-hide");
   modal.classList.remove("modal-show");
   modal.style.visibility = "hidden";
+  e.preventDefault();
 };
 
 let openModal = function () {
